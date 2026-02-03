@@ -1,0 +1,72 @@
+.theme-toggle-btn {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  /* background: rgba(255,255,255,0.1); */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  transition: all 0.35s ease;
+}
+
+/* Sun */
+.sun.visible {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.sun.hidden {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0);
+}
+
+/* Moon */
+.moon.visible {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.moon.hidden {
+  opacity: 0;
+  transform: rotate(90deg) scale(0);
+}
+
+/* THEMES */
+body[data-theme="light"] {
+  background-color: #ffffff;
+  color: #222;
+}
+
+body[data-theme="dark"] {
+  background-color: #0f0f0f;
+  color: #f5f5f5;
+}
+
+/* This forces the SVG icons to be white all the time */
+/* .theme-toggle-btn .icon {
+  color: var(--toggle-icon);
+  /* Optional: Adds a subtle glow to make it visible on white backgrounds */
+  /* filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));  */
+/* } */ 
+
+/* Ensure the button itself doesn't have a background */
+.theme-toggle-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--toggle-icon);
+}
+
+.theme-toggle-btn:hover{
+  background: #dae3e251;
+  /* color: var(--txt); */
+}

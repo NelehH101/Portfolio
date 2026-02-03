@@ -1,0 +1,135 @@
+/* Navbar wrapper */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 0 20px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+}
+
+/* Navbar container */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.navbar-logo {
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--logo);
+  transition: color 0.3s ease;
+}
+
+.navbar-logo:hover {
+  color: var(--bg);
+}
+
+.navbar-accent {
+  color: var(--accent);
+}
+
+/* Desktop links */
+.navbar-links {
+  display: none;
+  align-items: center;
+  gap: 24px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #8a99a9;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: var(--logo);
+}
+
+/* Buttons */
+.btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-accent {
+  background-color: var(--bg);
+  color: var(--btn-accent-txt);
+}
+
+.btn-accent:hover {
+  background-color: #59d0c4;
+  box-shadow: rgba(46, 204, 240, 0.4) 5px 5px, rgba(46, 204, 240, 0.3) 10px 10px, rgba(46, 211, 240, 0.2) 15px 15px, rgba(46, 172, 240, 0.1) 20px 20px, rgba(46, 101, 240, 0.05) 25px 25px;
+}
+
+/* Mobile toggle button */
+.navbar-toggle {
+  display: block;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .navbar-links {
+    display: flex;
+  }
+  .navbar-toggle {
+    display: none;
+  }
+}
+
+/* Mobile menu */
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px;
+}
+
+.mobile-link {
+  text-decoration: none;
+  color: #666;
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.mobile-link:hover {
+  color: #333;
+}
+
+.mobile-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar.scrolled {
+  background-color: var(--nav-bg);
+}

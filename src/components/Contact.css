@@ -1,0 +1,207 @@
+/* Contact.css */
+.contact-section {
+  padding: 100px 20px;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-subtitle {
+  color: var(--accent);
+  font-family: monospace;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.contact-title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.contact-description {
+  color: var(--text-secondary);
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+/* THE GRID: 
+   Set the first column to 1.3fr to give cards more width 
+*/
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr; 
+  gap: 100px;
+  align-items: start;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* THE CARDS:
+   Increased horizontal padding (35px) makes them stretch 
+*/
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 35px; 
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  text-decoration: none !important;
+  color: var(--text-primary) !important;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.social-card:hover {
+  border-color: var(--accent);
+  transform: translateX(10px);
+}
+
+.social-icon {
+  width: 55px;
+  height: 55px;
+  background-color: rgba(32, 197, 181, 0.15);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.social-card:hover .social-icon{
+  background-color: #41c6b862;
+}
+
+.social-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-label {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+}
+
+.social-username {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin: 4px 0 0 0;
+}
+
+.contact-availability {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  color: var(--bg);
+  font-size: 14px;
+}
+
+/* Form Styles */
+.contact-form-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.contact-section-title {
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+}
+
+/* Match the button width to the long cards */
+.submit-button {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--accent);
+  color: var(--txt); /* Assuming background is dark for contrast */
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: opacity 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.toast {
+  margin-top: 16px;
+  padding: 12px;
+  background-color: var(--accent);
+  color: var(--txt);
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
