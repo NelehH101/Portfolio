@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
-import Animated from "./Animated";
+import Animated from "./Animated.jsx";
 import "./Hero.css";
 import 'animate.css';
 

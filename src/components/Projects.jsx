@@ -1,6 +1,6 @@
 import React from "react";
 import { Layers, ShoppingCart, Database } from "lucide-react";
-import Animated from "./Animated";
+import Animated from "./Animated.jsx";
 import "./Projects.css";
 
 const projects = [

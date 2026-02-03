@@ -1,6 +1,6 @@
 import React from 'react';
 import { GraduationCap } from 'lucide-react';
-import Animated from './Animated';
+import Animated from './Animated.jsx';
 import './Education.css';
 
 const Education = () => {

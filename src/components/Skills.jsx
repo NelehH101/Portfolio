@@ -1,5 +1,5 @@
 import React from "react";
-import Animated from "./Animated";
+import Animated from "./Animated.jsx";
 import "./Skills.css";
 
 const skillCategories = [
