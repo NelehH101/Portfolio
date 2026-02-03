@@ -7,8 +7,8 @@ const socialLinks = [
   {
     icon: Github,
     label: "GitHub",
-    href: "https://github.com",
-    username: "@neleh-heunis",
+    href: "https://github.com/NelehH101",
+    username: "NelehH101",
   },
   {
     icon: Linkedin,
@@ -20,7 +20,7 @@ const socialLinks = [
     icon: Mail,
     label: "Email",
     href: "mailto:nelehheunis101@gmail.com",
-    username: "hello@example.com",
+    username: "nelehheunis101@gmail.com",
   },
 ];
 
