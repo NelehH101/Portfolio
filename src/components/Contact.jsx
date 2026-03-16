@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Github, Linkedin, Mail, Send, MapPin } from "lucide-react";
+import { Github, Linkedin, Mail, Send, MapPin, Phone } from "lucide-react";
 import Animated from "./Animated.jsx";
 import "./Contact.css"; // We'll define the CSS
 
@@ -21,6 +21,11 @@ const socialLinks = [
     label: "Email",
     href: "mailto:nelehheunis101@gmail.com",
     username: "nelehheunis101@gmail.com",
+  },
+  {
+    icon: Phone,
+    label: "Phone",
+    username: "073 614 8937",
   },
 ];
 
@@ -77,7 +82,7 @@ const Contact = () => {
                       <div className="social-icon">
                         <Icon size={20} />
                       </div>
-                      <div>
+                      <div className="social-text">
                         <p className="social-label">{link.label}</p>
                         <p className="social-username">{link.username}</p>
                       </div>
@@ -92,37 +97,15 @@ const Contact = () => {
             </div>
           </Animated>
 
-          {/* Contact Form */}
+          {/* New Image Column */}
           <Animated delay={200}>
-            <div className="contact-form-card">
-              <h3 className="contact-section-title">Send a Message</h3>
-              <form onSubmit={handleSubmit} className="contact-form">
-                <div className="form-row">
-                  <div className="form-group">
-                    <label>Name</label>
-                    <input type="text" name="name" placeholder="Your name" required />
-                  </div>
-                  <div className="form-group">
-                    <label>Email</label>
-                    <input type="email" name="email" placeholder="your@email.com" required />
-                  </div>
-                </div>
-
-                <div className="form-group">
-                  <label>Subject</label>
-                  <input type="text" name="subject" placeholder="What's this about?" required />
-                </div>
-
-                <div className="form-group">
-                  <label>Message</label>
-                  <textarea name="message" rows="5" placeholder="Your message..." required />
-                </div>
-
-                <button type="submit" className="submit-button" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending..." : <>Send Message <Send size={16} /></>}
-                </button>
-              </form>
-              {toastMessage && <div className="toast">{toastMessage}</div>}
+            <div className="contact-image-wrapper">
+              <div className="image-border-decoration"></div>
+              <img 
+                src="/neleh.jpg" 
+                alt="Neleh Heunis" 
+                className="contact-profile-img" 
+              />
             </div>
           </Animated>
         </div>
